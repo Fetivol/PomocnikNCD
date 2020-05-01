@@ -86,7 +86,165 @@
       <button type="button" id="logOut">Log Out</button>
     </div>
     <!-- -----------------------------LOGIN---------------- -->
-    
+    <div class="limiter">
+      <div class="weather divs" id="weather-block">
+        <div class="weather_block">
+          <div class="weather_now">
+            <img src="" alt="weather icon" id="weather_icon" />
+            <span id="weather_temp"></span>
+            <h4 id="city_name">City</h4>
+            <span id="weather_data"></span><br />
+            <span id="weather_info">WEATHER</span>
+          </div>
+          <div class="weather_later">
+            <span class="wls"></span> <img src="" alt="" class="wli" />
+            <span class="wlsh"></span><br />
+            <span class="wls"></span> <img src="" alt="" class="wli" />
+            <span class="wlsh"></span><br />
+            <span class="wls"></span> <img src="" alt="" class="wli" />
+            <span class="wlsh"></span>
+          </div>
+        </div>
+        <div class="air_block">
+          <!-- <span>Level of pollution: <span id="air_level"></span></span><br> -->
+          <span id="air_status">AIR</span>
+        </div>
+      </div>
+      <div class="to_do_list divs d-none" id="todo-block">
+        <!-- <span>TO DO LIST</span> -->
+        <div class="app">
+          <div class="app__header">
+            <div class="app__title">
+              <span class="app__title-text">To Do List</span>
+            </div>
+            <div class="app__info">
+              <div class="app__info-item">
+                <span class="app__info-text">Tasks</span>
+                <span class="app__info-number" id="js-all-tasks"></span>
+              </div>
+              <div class="app__info-item">
+                <span class="app__info-text">Done</span>
+                <span class="app__info-number" id="js-done-tasks"></span>
+              </div>
+            </div>
+          </div>
+          <div class="app__body">
+            <ul class="app__list" id="app__list"></ul>
+          </div>
+          <div class="app__footer">
+            <input
+              class="app__task-new"
+              id="app__task-new"
+              placeholder="Add new task"
+            />
+            <button type="button" id="add_tsk">Add</button>
+            <input type="time" id="time" />
+          </div>
+          <div class="add_photo">
+            <button id="btnCamera" type="button">
+              <i class="fas fa-camera-retro"></i>
+            </button>
+            <a data-fancybox="gallery" href="big_1.jpg" id="big_img"
+              ><img src="images/to-do.jpg" id="small_img"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <!-- calendar--------------------- -->
+      <div class="calendar divs d-none" id="cal-block">
+        <p id="today"></p>
+        <input type="text" id="datepicker" name="something" value="" />
+        <input type="text" id="eventName" />
+        <button id="event_btn">Add Event</button>
+
+        <div class="events" id="events"></div>
+      </div>
+      <!-- fastsms ------------------------ -->
+      <div class="fast_sms divs d-none" id="sms-block">
+        <div class="app__header">
+          <div class="app__title">
+            <span class="app__title-text">Fast SMS</span>
+          </div>
+        </div>
+        <div class="fast_sms__number">
+          <input
+            id="numberTxt"
+            placeholder="Enter mobile number"
+            value=""
+            type="tel"
+          />
+        </div>
+        <div class id="fast_sms__choose">
+          <form>
+            <input
+              id="contactTxt"
+              placeholder="Enter contact's name"
+              list="contactsList"
+              onInput="selectContact()"
+            />
+            <datalist id="contactsList"></datalist>
+          </form>
+        </div>
+        <div class="fast_sms__message">
+          <textarea id="messageTxt" placeholder="Enter message"></textarea>
+        </div>
+        <input
+          type="button"
+          id="sendSms_bttn"
+          onclick="app.sendSms()"
+          value="Send SMS"
+        />
+        <div class="app">
+          <div class="app__header" id="sms_app">
+            <div class="app__title">
+              <span class="app__title-text">SMS Templates</span>
+            </div>
+          </div>
+          <div class="app__body">
+            <ul class="app__list" id="fast_sms__list"></ul>
+          </div>
+          <div class="app__footer">
+            <input
+              class="app__task-new"
+              id="fast_sms__template-new"
+              placeholder="Add new template"
+            />
+            <button type="button" id="add_template">Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-panel row divs">
+        <div
+          class="col change-location active"
+          id="weather"
+          onclick="changeLocation('weather')"
+        >
+          AIR
+        </div>
+        <div
+          class="col change-location"
+          id="todo"
+          onclick="changeLocation('todo')"
+        >
+          TODO
+        </div>
+        <div
+          class="col change-location"
+          id="cal"
+          onclick="changeLocation('cal')"
+        >
+          CALENDAR
+        </div>
+        <div
+          class="col change-location"
+          id="sms"
+          onclick="changeLocation('sms')"
+        >
+          SMS
+        </div>
+      </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

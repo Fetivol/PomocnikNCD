@@ -1,0 +1,2 @@
+# PomocnikNCD
+ app

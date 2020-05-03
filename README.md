@@ -1,3 +1,3 @@
 # PomocnikNCD
  app
-Wtryna internetowa - <a href="fetivol.github.io">fetivol.github.io</a>
+Wtryna internetowa - <a href="https://fetivol.github.io">fetivol.github.io</a>

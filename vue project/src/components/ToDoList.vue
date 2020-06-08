@@ -29,8 +29,8 @@
         </div>
         <div class="show-completed" v-if="completedToDoList.length > 0">
             <div class="button" @click="showCompletedList = !showCompletedList">
-                <span v-if="!showCompletedList">show</span><span v-else>hide</span>
-                completed to-do's
+                <span v-if="!showCompletedList">Pokaż</span><span v-else>Schowaj</span>
+                wykonane zadania
             </div>
         </div>
         <div class="todo-list complete-list" v-if="showCompletedList">
